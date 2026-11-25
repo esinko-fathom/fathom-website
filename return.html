@@ -1260,11 +1260,24 @@
         doc.setLineWidth(2);
         doc.line(40, 40, 572, 40);
 
-        // Header Title
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(22);
-        doc.setTextColor(255, 255, 255);
-        doc.text('FATHOM AUTOMATION', 40, 75);
+        // Header Title — logo
+        try {
+          const logoResp = await fetch('./Images/fathom-full-text-transparent.png');
+          const logoBlob = await logoResp.blob();
+          const logoDataUrl = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result);
+            reader.readAsDataURL(logoBlob);
+          });
+          // Fit logo roughly where the old title was (~width 220, height ~28)
+          doc.addImage(logoDataUrl, 'PNG', 40, 55, 220, 28);
+        } catch (e) {
+          // Fallback if logo fails to load
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(22);
+          doc.setTextColor(255, 255, 255);
+          doc.text('FATHOM', 40, 75);
+        }
 
         doc.setFontSize(14);
         doc.setTextColor(0, 242, 254);
@@ -1354,7 +1367,7 @@
         doc.setFontSize(8.5);
         doc.setTextColor(120, 125, 140);
         doc.text('This estimate is prepared for engineering and financial planning purposes.', 40, 740);
-        doc.text('Contact fathom Automation: 500 Bic Drive, Milford, CT | 203-293-9564 | info@fathom-usa.com', 40, 755);
+        doc.text('Contact Fathom USA: 500 Bic Drive, Milford, CT | 203-293-9564 | info@fathom-usa.com', 40, 755);
 
         // Trigger Download
         doc.save(`Fathom_Project_Return_Report_${company.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`);
