@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Fathom Website <onboarding@resend.dev>',
+        from: 'Fathom Website <notify@fathom-usa.com>',
         to: ['info@fathom-usa.com'],
         reply_to: email,
         subject: `New contact form submission from ${firstName} ${lastName}`,
