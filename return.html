@@ -985,7 +985,7 @@
 
     <div id="roi-form-container">
       <h3 class="roi-modal-title">Get Your Executive ROI Report</h3>
-      <p class="roi-modal-desc">Enter your details below. We'll generate an official Fathom Project Return PDF and email a copy from <strong>support@fathom.com</strong>.</p>
+      <p class="roi-modal-desc">Enter your details below. We'll generate an official Fathom Project Return PDF and email a copy from <strong>info@fathom-usa.com</strong>.</p>
 
       <form id="roi-report-form">
         <div class="roi-form-group">
@@ -1010,7 +1010,7 @@
       </div>
       <h3 style="font-size: 22px; color: #fff; margin-bottom: 8px;">Report Generated & Dispatched</h3>
       <p style="font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 20px;">
-        Your official Fathom Project Return PDF has been generated and downloaded. A copy has also been sent to your email from <strong>support@fathom.com</strong>.
+        Your official Fathom Project Return PDF has been generated and downloaded. A copy has also been sent to your email from <strong>info@fathom-usa.com</strong>.
       </p>
       <button type="button" class="nav-contact-btn" id="roi-done-btn" style="padding: 12px 28px;">Done</button>
     </div>
@@ -1278,7 +1278,7 @@
         doc.text(`Company: ${company}`, 40, 145);
         doc.text(`Email: ${email}`, 40, 160);
         doc.text(`Date: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}`, 40, 175);
-        doc.text(`Dispatched from: support@fathom.com`, 40, 190);
+        doc.text(`Dispatched from: info@fathom-usa.com`, 40, 190);
 
         // Core Financial Metrics Box
         doc.setFillColor(13, 16, 25);
@@ -1354,7 +1354,7 @@
         doc.setFontSize(8.5);
         doc.setTextColor(120, 125, 140);
         doc.text('This estimate is prepared for engineering and financial planning purposes.', 40, 740);
-        doc.text('Contact fathom Automation: 500 Bic Drive, Milford, CT | 203-293-9564 | support@fathom.com', 40, 755);
+        doc.text('Contact fathom Automation: 500 Bic Drive, Milford, CT | 203-293-9564 | info@fathom-usa.com', 40, 755);
 
         // Trigger Download
         doc.save(`Fathom_Project_Return_Report_${company.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`);
