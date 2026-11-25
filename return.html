@@ -1270,7 +1270,7 @@
             reader.readAsDataURL(logoBlob);
           });
           // Fit logo roughly where the old title was (~width 220, height ~28)
-          doc.addImage(logoDataUrl, 'PNG', 40, 55, 220, 28);
+          doc.addImage(logoDataUrl, 'PNG', 40, 55, 176, 28);
         } catch (e) {
           // Fallback if logo fails to load
           doc.setFont('helvetica', 'bold');
