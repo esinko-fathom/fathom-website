@@ -497,7 +497,9 @@ document.querySelectorAll('.benefit-video').forEach(vid => {
       email:     document.getElementById('cf-email')?.value || '',
       company:   document.getElementById('cf-company')?.value || '',
       phone:     document.getElementById('cf-phone')?.value || '',
+      help:      document.getElementById('cf-help')?.value || '',
       message:   document.getElementById('cf-message')?.value || '',
+      comments:  document.getElementById('cf-comments')?.value || '',
     };
 
     try {
