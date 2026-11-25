@@ -602,7 +602,7 @@ textarea {
   align-items: center;
   justify-content: center;
   padding: 112px var(--pad) 56px;
-  background: 
+  background:
     repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255, 255, 255, 0.05) 60px),
     repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255, 255, 255, 0.05) 60px),
     var(--dark-accent-gradient);
@@ -1770,8 +1770,8 @@ textarea {
   .cf-field {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 32px;
+    gap: 8px;
+    margin-bottom: 20px;
   }
 
   .cf-field label {
@@ -1785,27 +1785,36 @@ textarea {
     font-size: 16px;
   }
 
-  .cf-field input {
+  .cf-field input,
+  .cf-field textarea {
     background: rgba(255, 255, 255, .05);
     border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: 12px;
-    padding: 20px 24px;
-    color: var(--white);
-    font-size: 18px;
+    border-radius: 10px;
+    padding: 15px 18px;
+    color: #ffffff;
+    font-size: 15px;
     transition: all .3s ease;
     outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cf-field textarea {
+    min-height: 90px;
+    resize: vertical;
+    font-family: inherit;
   }
 
   .cf-field input::placeholder {
     color: rgba(255, 255, 255, .3);
   }
 
-  .cf-field input:focus {
-    border-background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  .cf-field input:focus,
+  .cf-field textarea:focus {
+    border-color: rgba(59, 130, 246, 0.6);
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
-    background: rgba(59, 130, 246, 0.05);
+    background: rgba(255, 255, 255, .07);
+    color: #ffffff;
   }
 
   .cf-select-wrap {
@@ -1817,21 +1826,20 @@ textarea {
     appearance: none;
     background: rgba(255, 255, 255, .05);
     border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: 12px;
-    padding: 20px 24px;
+    border-radius: 10px;
+    padding: 15px 18px;
     color: rgba(255, 255, 255, .8);
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
     outline: none;
     transition: all .3s ease;
   }
 
   .cf-select-wrap select:focus {
-    border-background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    border-color: rgba(59, 130, 246, 0.6);
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
-    background: rgba(59, 130, 246, 0.05);
+    background: rgba(255, 255, 255, .07);
+    color: #ffffff;
   }
 
   .cf-select-wrap svg {
@@ -1846,18 +1854,18 @@ textarea {
     width: 100%;
     background: var(--accent-gradient);
     border: none;
-    border-radius: 12px;
-    padding: 22px;
+    border-radius: 10px;
+    padding: 16px;
     font-family: var(--font-body);
     font-weight: 700;
     letter-spacing: 0.1em;
     color: var(--white);
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
     transition: all .3s ease;
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
-    margin-top: 20px;
+    margin-top: 12px;
   }
 
   .cf-submit:hover {
@@ -2547,39 +2555,39 @@ textarea {
   .hero-text-reveal { font-size: clamp(48px, 10vw, 80px) !important; line-height: 1.1 !important; }
   .contact-heading { font-size: clamp(40px, 8vw, 60px) !important; line-height: 1.1 !important; }
   .imagine-tagline, .phil-tagline { font-size: clamp(48px, 10vw, 72px) !important; line-height: 1.1 !important; }
-  
+
   /* Prevent text cutoff */
   * { box-sizing: border-box; }
   body { overflow-x: hidden; }
   .split-inner, .ff-container, .contact-body, .philosophy-inner, .products-container { width: 100% !important; padding: 0 15px !important; box-sizing: border-box; }
-  
+
   /* Sections Padding (not too tall) */
   .page-hero { padding: 120px 15px 40px !important; height: auto !important; min-height: 0 !important; }
   #products-hero-section { padding-top: 120px !important; padding-bottom: 40px !important; }
   #standardized-products-section { padding: 40px 0 80px !important; }
-  .split-section, #philosophy-section, #yos-section, .cs-section { 
-    padding: 60px 0 !important; 
-    height: auto !important; 
-    min-height: 0 !important; 
+  .split-section, #philosophy-section, #yos-section, .cs-section {
+    padding: 60px 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
   }
-  
+
   #imagine-section {
     height: auto !important;
     padding: 100px 15px !important;
   }
-  
+
   /* Grids & Layouts */
   .split-inner, .cs-card-inner, .cs-card-inner.reverse, .ff-grid, .footer-bottom-grid {
     flex-direction: column !important;
     grid-template-columns: 1fr !important;
     gap: 30px !important;
   }
-  
+
   .split-left, .split-right, .cs-text, .cs-img {
     flex: none !important;
     width: 100% !important;
   }
-  
+
   /* Specific Fixes */
   .cs-img { min-height: 250px !important; }
   .cs-text { padding: 30px 20px !important; }
@@ -2595,7 +2603,7 @@ textarea {
   .yos-inner { margin-bottom: 20px !important; }
   .ff-title { font-size: 36px !important; line-height: 1.2 !important; }
   .cs-modal-title { font-size: 32px !important; }
-  
+
   /* Contact Form Specifics */
   .contact-body { gap: 40px !important; padding-bottom: 60px !important; }
   .contact-form-box { padding: 30px !important; border-radius: 16px !important; }
